@@ -1,0 +1,13 @@
+#libraryShelf {
+    background: green;
+    height: 800px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+}
+
+.bookCard {
+    background: white;
+    width: 80%;
+    height: 20%;
+}
