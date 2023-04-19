@@ -1,3 +1,15 @@
+#outerContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+#addBook {
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
 #libraryShelf {
     background: green;
     height: 800px;
