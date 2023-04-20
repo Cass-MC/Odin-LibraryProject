@@ -17,8 +17,13 @@ const revenant = new Book("Revenant Gun", "Yoon Ha Lee", 427, "not read");
 
 myLibrary.push(hobbit,thud,revenant);
 
-function addBookToLibrary(title,author,pages,read) {
-    let newBook = new Book(title,author,pages,read);
+function addBookToLibrary() {
+    const title = document.getElementById("book_title").value;
+    const author = document.getElementById("book_author").value;
+    const pages = document.getElementById("book_pages").value;
+    const readNode = document.getElementById("book_status");
+    const read = readNode.options[readNode.selectedIndex].text;
+    const newBook = new Book(title,author,pages,read);
     myLibrary.push(newBook);
 }
 

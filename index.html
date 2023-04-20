@@ -13,7 +13,33 @@
             </div>
         </div>
         <div id="bookFormPopup">
-            Hiiii :3
+            <div id="bookForm">
+                <form action="" method="post">
+                    <div class="formField">
+                        <label for="book_title">Book Title:</label>
+                        <input type="text" id="book_title">
+                    </div>
+
+                    <div class="formField">
+                        <label for="book_author">Author:</label>
+                        <input type="text" id="book_author">
+                    </div>
+
+                    <div class="formField">
+                        <label for="book_pages">Page Count:</label>
+                        <input type="text" id="book_pages">
+                    </div>
+
+                    <div class="formField">
+                        <label for="book_status">Finished Reading?</label>
+                        <select name="book_status" id="book_status">
+                            <option value="Yes" selected>Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </form>
+                <button id="addToLibrary" onclick="addBookToLibrary()">Add To Library</button>
+            </div>
         </div>
     </body>
 </html>

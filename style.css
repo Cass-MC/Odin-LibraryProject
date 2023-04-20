@@ -33,3 +33,12 @@
     left: 0;
     top: 30%;
 }
+
+.formField {
+    padding: 10px;
+}
+
+#addToLibrary {
+    width: 80px;
+    height: 40px;
+}
