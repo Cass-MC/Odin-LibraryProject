@@ -17,6 +17,8 @@ const revenant = new Book("Revenant Gun", "Yoon Ha Lee", 427, "not read");
 
 myLibrary.push(hobbit,thud,revenant);
 
+window.onload = displayBooksOnShelf;
+
 function addBookToLibrary() {
     const title = document.getElementById("book_title").value;
     const author = document.getElementById("book_author").value;
@@ -25,14 +27,22 @@ function addBookToLibrary() {
     const read = readNode.options[readNode.selectedIndex].text;
     const newBook = new Book(title,author,pages,read);
     myLibrary.push(newBook);
+    displayBooksOnShelf();
+    closeForm();
 }
 
 function displayBooksOnShelf() {
+    const libraryShelfNode = document.getElementById("libraryShelf");
+    //clear so it doesn't do duplicates
+    while (libraryShelfNode.firstChild) {
+        libraryShelfNode.removeChild(libraryShelfNode.firstChild);
+    }
+
     for (const book of myLibrary) {
         const bookNode = document.createElement("div");
         bookNode.className = "bookCard";
         bookNode.innerText = book.getInfo();
-        document.getElementById("libraryShelf").appendChild(bookNode);
+        libraryShelfNode.appendChild(bookNode);
         console.log(bookNode);
     }
 }
