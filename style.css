@@ -23,3 +23,13 @@
     width: 80%;
     height: 20%;
 }
+
+#bookFormPopup {
+    background: red;
+    text-align: center;
+    width: 100%;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 30%;
+}

@@ -31,3 +31,14 @@ function displayBooksOnShelf() {
         console.log(bookNode);
     }
 }
+
+function formPopUp() {
+    document.getElementById("bookFormPopup").style.display = "block";
+    console.log("hi");
+}
+
+function closeForm() {
+    document.getElementById("bookFormPopup").style.display = "none";
+}
+
+//Look at this: https://www.w3docs.com/snippets/javascript/how-to-create-a-popup-form-using-javascript.html
