@@ -24,6 +24,12 @@
     height: 20%;
 }
 
+.bookRemoveButton {
+    width: 55px;
+    height: 20px;
+    text-align: center;
+}
+
 #bookFormPopup {
     background: red;
     text-align: center;

@@ -42,8 +42,12 @@ function displayBooksOnShelf() {
         const bookNode = document.createElement("div");
         bookNode.className = "bookCard";
         bookNode.innerText = book.getInfo();
+        bookNode.dataset.index = myLibrary.indexOf(book);
+        const bookRemove = document.createElement("button");
+        bookRemove.innerText = "Remove";
+        bookRemove.className = "bookRemoveButton";
+        bookNode.appendChild(bookRemove);
         libraryShelfNode.appendChild(bookNode);
-        console.log(bookNode);
     }
 }
 
