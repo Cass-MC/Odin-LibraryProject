@@ -12,8 +12,13 @@ Book.prototype.getInfo = function() {
 }
 
 Book.prototype.toggleRead = function() {
-    if (this.Read == "Yes") { this.Read = "No"; }
-    if (this.Read == "No") { this.Read = "Yes"; }
+    if (this.Read == "Yes") {
+        this.Read = "No";
+        return;
+    }
+    if (this.Read == "No") {
+        this.Read = "Yes";
+    }
 }
 
 const hobbit = new Book("The Hobbit", "J.R.R Tolkien", 200, "Yes");
@@ -97,5 +102,3 @@ function formPopUp() {
 function closeForm() {
     document.getElementById("bookFormPopup").style.display = "none";
 }
-
-//Look at this: https://www.w3docs.com/snippets/javascript/how-to-create-a-popup-form-using-javascript.html
