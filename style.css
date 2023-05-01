@@ -52,7 +52,21 @@
     background-color: red;
     height: 30px;
     width: 100%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookToggleButton input[type='checkbox'] {
+	-webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.bookToggleButton input[type='checkbox']:checked {
+    background-color: green;
+    
 }
 
 #bookFormPopup {
