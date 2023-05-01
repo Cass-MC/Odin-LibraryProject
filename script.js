@@ -8,7 +8,7 @@ function Book(title, author, pages, read) {
 }
 
 Book.prototype.getInfo = function() {
-    return `${this.Title} by ${this.Author}, ${this.Pages}, ${this.Read}`;
+    return `${this.Title} by ${this.Author}, ${this.Pages} pages`;
 }
 
 Book.prototype.toggleRead = function() {
@@ -49,15 +49,19 @@ function displayBooksOnShelf() {
     }
 
     for (const book of myLibrary) {
-        const bookNode = document.createElement("div");
-        bookNode.className = "bookCard";
-        bookNode.innerText = book.getInfo();
+        const bookCard = document.createElement("div");
+        bookCard.className = "bookCard";
+
+        const bookInfo = document.createElement("div");
+        bookInfo.className = "bookInfo";
+        bookInfo.innerText = book.getInfo();
+        bookCard.appendChild(bookInfo);
         
         const bookRemove = document.createElement("button");
         bookRemove.innerText = "Remove";
         bookRemove.className = "bookRemoveButton";
         bookRemove.dataset.index = myLibrary.indexOf(book);
-        bookNode.appendChild(bookRemove);
+        bookCard.appendChild(bookRemove);
 
         let toggleHtml = "<input type=\"checkbox\" id=\"toggle\"";
         if (book.Read == "Yes") {
@@ -68,9 +72,9 @@ function displayBooksOnShelf() {
         bookToggle.className = "bookToggleButton";
         bookToggle.innerHTML = toggleHtml;
         bookToggle.dataset.index = myLibrary.indexOf(book);
-        bookNode.appendChild(bookToggle);
+        bookCard.appendChild(bookToggle);
 
-        libraryShelfNode.appendChild(bookNode);
+        libraryShelfNode.appendChild(bookCard);
     }
 
     for (const removeButton of document.querySelectorAll(".bookRemoveButton")) {
